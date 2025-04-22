@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+    <style>
+        body{
+            background-image:url("https://th.bing.com/th/id/OIP.qfFbr5YpCpr6Dz-EfQwBcAHaEo?rs=1&pid=ImgDetMain");
+            background-repeat: no-repeat;
+            background-size: cover;
+            #click{
+                font-size: larger;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color:rgba(255, 255, 255, 0.945);
+                background-image:url("https://th.bing.com/th/id/OIP.tQLdi-H7m7q3pqJj3suGAQHaFj?w=670&h=503&rs=1&pid=ImgDetMain");
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="click" onclick="multiply(18)">Press me!</button>
+    <script>
+        function multiply(x,y){
+            if (y === undefined){
+                y=9;
+            }
+            document.write(x*y);
+        }
+    </script>
+</body>
+</html>
