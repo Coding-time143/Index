@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope of Functions</title>
+    <style>
+        body{
+            background-image: url("https://th.bing.com/th/id/OIP.mR5fUtYQENC3Ume2zN5ePQHaFj?rs=1&pid=ImgDetMain");
+            background-repeat: no-repeat;
+            background-size: cover;
+            #design{
+                font-size: large;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color:aliceblue;
+                background-image: url("https://th.bing.com/th/id/OIP.WmioWU5tXuluN7fpGwyZhAHaFj?w=800&h=600&rs=1&pid=ImgDetMain");
+            }
+            p{
+                color:aliceblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Scope means how much limit one thing contains</p>
+    <button id="design" button type="button" onclick="myFunction()">Click me now!</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+        var b=26;
+        function myFunction(){
+            var a=5;
+            document.getElementById("demo").innerHTML= b*a;
+        }
+        document.getElementById("demo1").innerHTML= a;
+        document.getElementById("demo1").innerHTML= b;
+    </script>
+</body>
+</html>
