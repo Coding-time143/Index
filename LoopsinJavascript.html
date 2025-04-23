@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops In Javascript</title>
+    <style>
+        body{
+            background-image: url("https://th.bing.com/th/id/OIP.hplnCPXjboGlD_89kTI4UwAAAA?w=253&h=450&rs=1&pid=ImgDetMain");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <p id="example"></p>
+    <script>
+        var fruits=["apple","carrot","mulberry","orange"];
+        var text="";
+        var i;
+        for(i=0; i<fruits.length; i++){;
+        text+=fruits[i]+"<br>";
+        }
+        document.getElementById("example").innerHTML=text;
+    </script>
+</body>
+</html>
