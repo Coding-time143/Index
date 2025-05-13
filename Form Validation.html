@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body{
+            background-image:url("https://th.bing.com/th/id/OIP.fW8euwoLg4hO8d10VlbHmQHaNK?w=720&h=1280&rs=1&pid=ImgDetMain");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+html {
+height: 100%;
+width: 100%;
+font-family: 'Poppins', sans-serif;
+}
+h1{
+text-align: center;
+}
+form {
+max-width: 300px;
+margin: 0 auto;
+font-family: 'Poppins', sans-serif;
+text-align: center;
+}
+div {
+margin-bottom: 10px;
+font-family: 'Poppins', sans-serif;
+}
+button{
+font-family: 'Poppins', sans-serif;
+cursor: pointer;
+}
+#message{
+text-align: center;
+font-size: 20px;
+margin-top: 10px;
+}
+    </style>
+</head> 
+<body>
+    <h1>Form Validation Using Javascript</h1>
+    <hr>
+    <form id="loginForm" onsubmit="validate(event)">
+        <!-- Fieldset groups related elements in a form -->
+         <fieldset>
+            <!-- Email input field -->
+             <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+             </div>
+        <!-- Password input field with a minimum length requirement -->
+         <div>
+            <label for="password">Password:</label>
+            <!-- minlenght attribute ensures the password is at least 8 characters long -->
+            <input type="password" id="password" name="password" minlength="8">
+         </div>
+         <!-- Age input field with minimum and maximum value requirements-->
+          <div>
+            <label for="age">Age:</label>
+              <!-- min and max attributes define the acceptable range of ages-->
+              <input type="number" id="age" name="age" min="12" max="50">
+          </div>
+          <!-- Submit button for the form -->
+          <button type="submit">Login</button>
+         </fieldset>
+    </form>
+    <!-- Div for displaying validation messages -->
+     <div id="message"></div>
+     <!-- Link to the external Javascript file -->
+      <script>
+        function validate(e){
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const pass = document.getElementById('password').value;
+            const age = document.getElementById('age').value;
+            const msgBox = document.getElementById('message');
+            let message = '';
+            if (email === '') {
+                message = 'Please enter an email.';
+msgBox.style.color = 'red';
+} else if (pass === '') {
+message = 'Password must be at least 8 characters.';
+msgBox.style.color = 'red';
+} else if (age === '') {
+message = 'Age must be between 12 and 50.';
+msgBox.style.color = 'red';
+}
+else {
+message = 'Login successful!';
+msgBox.style.color = 'green';
+}
+msgBox.innerText = message;
+}
+      </script>
+</body>
+</html>
