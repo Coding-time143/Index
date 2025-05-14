@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Map</title>
+    <style>
+        body{
+            background-image:url("https://th.bing.com/th/id/OIP.qpT2n0R-GQv5Y4Gwyh6V6wHaEo?rs=1&pid=ImgDetMain");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Values of variables when multipied by 10:</h1>
+    <h1 id="result"></h1>
+    <script>
+        var numbers=[1,2,3,4,5,6,7,8,9,0];
+        function result(number){
+            return number*10;
+        }
+        var newarray= numbers.map(result);
+        document.getElementById("result").innerHTML= newarray;
+    </script>
+</body>
+</html>
