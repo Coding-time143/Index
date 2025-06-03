@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Using Javascript</title>
+    <style>
+        body{
+            background-image: url("https://i.pinimg.com/originals/d0/9a/17/d09a170898bd0bcffeb07a1de92a0c9d.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+   <h1>Palindrome</h1> 
+    <script>
+    function palindrome(myString){
+        var input= myString.replace(/[A-Z0-9]/ig,"").toLowerCase();
+        var reversedInput=input.split('').reverse().join();
+        if (input===reversedInput){
+            document.write("Is a palindrome");
+        }
+        else{
+            document.write("Is not a palindrome");
+        }
+    }
+   </script>
+</body>
+</html>
