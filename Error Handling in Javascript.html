@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling in Javascript</title>
+    <style>
+        body{
+            background-image: url("https://wallpapercave.com/wp/wp7985456.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Error Handling in Javascript</h1>
+    <p> In today's project I will learn how to catch errors!</p>
+    <p id="error_message"></p>
+    <script>
+        try{
+            addalert("We.com:!");
+        }
+        catch(err){
+            document.getElementById("error_message").innerHTML = err.message;
+        }
+    </script>
+</body>
+</html>
