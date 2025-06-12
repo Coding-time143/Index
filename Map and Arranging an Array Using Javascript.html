@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map and Arranging an Array Using Javascript</title>
+    <style>
+        body{
+            background-image: url("https://static.vecteezy.com/system/resources/previews/021/917/770/original/pastel-coloured-hand-painted-background-with-an-abstract-oil-painting-design-free-vector.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+     <button id="ascendingbutton"  onclick="ascending()">Ascending order</button>
+    <button id="descendingbutton" onclick="descending()">Descending order</button>
+    <h1 id="result"></h1>
+    <script>
+        var numbers=[12,16,20,80,45,32,90];
+        document.getElementById("result").innerHTML=numbers;
+        function ascending(){
+            numbers.sort(function (x,z)
+        {
+            return x-z
+        });
+        document.getElementById("result").innerHTML=numbers;
+        }
+         function descending(){
+            numbers.sort(function (x,z)
+        {
+            return z-x
+        });
+        document.getElementById("result").innerHTML=numbers;
+        }
+    </script>
+</body>
+</html>
