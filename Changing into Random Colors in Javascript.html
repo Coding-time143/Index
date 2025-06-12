@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changing into Random Colors in Javascript</title>
+    <style>
+        button{
+             border-radius: 5px;
+            background-color: rgba(238, 217, 101, 0.205);
+            border-color: rgb(8, 8, 8);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="document.body.style.backgroundColor = getRandomColor()">Change Color</button>
+<script>
+function getRandomColor() {
+  return "rgb(" + 
+    Math.floor(Math.random() * 256) + "," +
+    Math.floor(Math.random() * 256) + "," +
+    Math.floor(Math.random() * 256) + ")";
+}
+</script>
+</body>
+</html>
