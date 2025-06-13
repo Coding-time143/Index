@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Functions in Javascript</title>
+    <style>
+        body{
+            background-image: url("https://th.bing.com/th/id/OIP.VUpQPTogWt87uWDuWA4iCwHaEK?rs=1&pid=ImgDetMain");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h2>Convert a JavaScript object into a JSON string, and send it to the server.</h2>
+    <p id="result"></p>
+    <script>
+      var myObj = { name: "Riya", age: 12, grade: 7 };
+      var myJSON = JSON.stringify(myObj); // converts object to JSON for sending data
+      var newObj = JSON.parse(myJSON); // converts JSON into object while receiving data 
+      document.getElementById("result").innerHTML = newObj.name;
+    </script>
+</body>
+</html>
