@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider in Website Using Javascript</title>
+    <style>
+        #div1{
+width: 1000px;
+height: 700px;
+background-color: #e66707;
+text-align: center;
+margin: 0px auto;
+color: #fff;
+}
+</style>
+</head>
+<body>
+<div id="div1">
+<h1>Slider</h1>
+<button onclick="carousel()">click me</button>
+<section>
+<img src="" height="300px" width="300px" id="pid">
+</section>
+</div>
+<script>
+var text1 = "https://m.media-amazon.com/images/I/517yRBCPaGL._UF894,1000_QL80_.jpg";
+var text2 = "https://m.media-amazon.com/images/S/pv-target-images/259fbc97ce839d091caea10e1d0c626a4821eb5f7086568e4b1b61a8f9036252._SX1080_FMjpg_.jpg";
+// index: 0 1
+var arr = [text1, text2]
+var i = 0;
+// function is like a robot that does a particular task
+function changeText(){
+i = i+1; // i -> 1,2
+if(i == arr.length){
+i = 0;
+}
+document.getElementById("pid").src = arr[i];
+}
+function carousel(){
+setInterval(changeText, 1000)
+}
+</script>
+</body>
+</html>
