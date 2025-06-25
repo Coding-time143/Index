@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images in Slider Using Javascript</title><style>
+        body{
+            background-image: url("https://th.bing.com/th/id/OIP.MfxEpjgV66mk-AUdzEJe8QHaE8?w=1000&h=667&rs=1&pid=ImgDetMain");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+           #div1{
+        width: 1000px;
+        height: 700px;
+        text-align: center;
+        margin: 0px auto;
+        color: #fff;
+       } 
+       button{
+          border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.185);
+      font-size: 20px;
+      font-family: serif;
+      color: rgb(255, 255, 255);
+      padding: 10px 25px;
+      cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <div id="div1">
+<h1>Slider</h1>
+<button onclick="carousel()">click me</button>
+<section>
+<img src="" height="300px" width="300px" id="pid">
+</section>
+</div>
+<script>
+var text1 = "https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?cs=srgb&dl=food-dinner-lunch-461198.jpg&fm=jpg";
+var text2 = "https://th.bing.com/th/id/OIP.W9RFknwcGfgpMFJFhQurjgHaEK?rs=1&pid=ImgDetMain";
+var text3 = "https://th.bing.com/th/id/OIP.moetGdqUnti0jwfEq0U1twHaE8?rs=1&pid=ImgDetMain";
+var text4 = "https://th.bing.com/th/id/OIP.wjmwzDQ87Zl1Lt1mLswrFgHaE7?rs=1&pid=ImgDetMain";
+var text5 = "https://img.freepik.com/free-photo/grilled-tomato-steak-fresh-salad-healthy-gourmet-meal-generated-by-artificial-intelligence_188544-129852.jpg"; 
+var text6 = "https://th.bing.com/th/id/OIP.OnBzM_aZJzc8H4yLg4-CjgHaHa?rs=1&pid=ImgDetMain";
+var text7 = "https://th.bing.com/th/id/R.506369a60cd7c2a77661f90db0e51313?rik=sSvCoo9TDcTKCA&pid=ImgRaw&r=0";
+var text8 = "https://th.bing.com/th/id/OIP.-tzcQCb1xHS7BB7sfY1w6wHaE7?rs=1&pid=ImgDetMain";
+var text9 = "https://th.bing.com/th/id/OIP.beC0ZQZH0PmZWMpzhfyPEQHaE7?rs=1&pid=ImgDetMain";
+var text10 = "https://img.freepik.com/premium-photo/realistic-delicious-sushi-display-purposes_695646-746.jpg";
+// index: 0 1
+var arr = [text1, text2, text3, text4, text5, text6, text7, text8, text9, text10]
+var i = 0;
+// function is like a robot that does a particular task
+function changeText(){
+i = i+1; // i -> 1,2
+if(i == arr.length){
+i = 0;
+}
+document.getElementById("pid").src = arr[i];
+}
+function carousel(){
+setInterval(changeText, 1000)
+}
+</script>
+</body>
+</html>
